@@ -1,6 +1,6 @@
 # 한국어 AI 에이전트 스킬 모음
 
-X에서 발견한 AI 에이전트 스킬을 검토하고, 출처와 라이선스를 보존하며 한국어로 정리하는 개인용 비공개 저장소입니다.
+X에서 발견한 AI 에이전트 스킬을 검토하고, 출처와 라이선스를 보존하며 한국어로 정리하는 공개 저장소입니다.
 
 ## 사용 가능한 스킬
 
@@ -10,6 +10,9 @@ X에서 발견한 AI 에이전트 스킬을 검토하고, 출처와 라이선스
 | [humanize-korean-lite](skills/humanize-korean-lite/SKILL.md) | 의미와 격식을 유지하며 한국어 문장을 다듬기 | 간결한 수정본; 직접 적용 2사례 확인, 독립 세션 미검증 |
 | [career-resume-ko](skills/career-resume-ko/SKILL.md) | 확인된 경력과 프로젝트로 한국어 경력기술서 작성 | 한국어 수정본; 직접 적용 1사례 확인, 독립 세션 미검증 |
 | [imagegen-frontend-web-ko](skills/imagegen-frontend-web-ko/SKILL.md) | 웹 화면의 섹션별 디자인 참고 이미지 만들기 | 한국어 재구성; 실제 이미지 1장 생성, 독립 세션과 여러 섹션 미검증 |
+| [lucian-icons-ko](skills/lucian-icons-ko/SKILL.md) | 한국어 검색과 번호로 움직이는 Lucian 아이콘 적용 | 한국어 안내; 상세 시험 결과는 별도 기록 참조 |
+
+각 스킬은 원본의 라이선스를 따릅니다. 사용과 재배포 조건은 각 스킬 폴더의 `LICENSE` 또는 `LICENSE.md`와 `ORIGIN.md`를 확인하세요.
 
 ## 설치: Codex
 
@@ -22,13 +25,14 @@ test ! -e "${CODEX_HOME:-$HOME/.codex}/skills/discernment-nudge-ko" && cp -R kor
 test ! -e "${CODEX_HOME:-$HOME/.codex}/skills/humanize-korean-lite" && cp -R korean-agent-skills/skills/humanize-korean-lite "${CODEX_HOME:-$HOME/.codex}/skills/"
 test ! -e "${CODEX_HOME:-$HOME/.codex}/skills/career-resume-ko" && cp -R korean-agent-skills/skills/career-resume-ko "${CODEX_HOME:-$HOME/.codex}/skills/"
 test ! -e "${CODEX_HOME:-$HOME/.codex}/skills/imagegen-frontend-web-ko" && cp -R korean-agent-skills/skills/imagegen-frontend-web-ko "${CODEX_HOME:-$HOME/.codex}/skills/"
+test ! -e "${CODEX_HOME:-$HOME/.codex}/skills/lucian-icons-ko" && cp -R korean-agent-skills/skills/lucian-icons-ko "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
-비공개 저장소이므로 GitHub 접근 권한이 필요합니다. 새 Codex 세션을 시작해 원하는 스킬을 사용해 달라고 요청합니다. 첫 두 스킬의 복사 절차는 격리된 시험 폴더에서 확인했으며 실제 사용자 환경에는 설치하지 않았습니다. 다른 에이전트는 해당 제품의 스킬 경로와 지원 형식을 확인하세요.
+새 Codex 세션을 시작해 원하는 스킬을 사용해 달라고 요청합니다. 첫 두 스킬의 복사 절차는 격리된 시험 폴더에서 확인했으며 실제 사용자 환경에는 설치하지 않았습니다. 다른 에이전트는 해당 제품의 스킬 경로와 지원 형식을 확인하세요.
 
 ## 새 후보를 가져오는 순서
 
-1. X 게시물과 실제 GitHub 원본을 확인하고, 작성자·원본 경로·커밋을 기록합니다.
+1. X 북마크에서 게시된 지 10일 미만인 글을 확인합니다. 실제 GitHub 원본의 작성자·경로·커밋을 기록합니다.
 2. 원본 파일과 별도 파일의 라이선스를 확인합니다. 재배포 조건이 불명확하면 링크만 기록합니다.
 3. 지침·스크립트·외부 전송과 설치 명령을 검토합니다. 출처 불명의 코드는 실행하지 않습니다.
 4. 한국어 사용 예와 사용 범위를 다듬고, 원본 표시·라이선스·변경 내용을 남깁니다.
@@ -41,3 +45,5 @@ test ! -e "${CODEX_HOME:-$HOME/.codex}/skills/imagegen-frontend-web-ko" && cp -R
 [가상 요청을 이용한 직접 적용 사례](tests/manual-cases-2026-10-27.md)를 확인하세요. 이 테스트는 같은 Codex 대화에서 스킬을 읽고 적용한 사례이며, 새 세션의 자동 스킬 선택이나 독립 에이전트 평가를 의미하지 않습니다.
 
 [웹 디자인 이미지 실제 생성 시험](tests/imagegen-frontend-web-ko-2026-10-27.md)에서 입력, 결과와 한계를 확인할 수 있습니다.
+
+[Lucian Icons 한국어 스킬 시험 기록](tests/lucian-icons-ko-2026-10-27.md)에서 실행 결과와 한계를 확인하세요.

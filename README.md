@@ -7,6 +7,7 @@ X에서 발견한 AI 에이전트 스킬을 검토하고, 출처와 라이선스
 | 스킬 | 하는 일 | 상태 |
 | --- | --- | --- |
 | [discernment-nudge-ko](skills/discernment-nudge-ko/SKILL.md) | 중요한 답변에서 다시 살펴볼 사실과 가정을 질문으로 제안 | 한국어 수정본, 형식 검증 완료; 실제 에이전트 실행 미검증 |
+| [humanize-korean-lite](skills/humanize-korean-lite/SKILL.md) | 의미와 격식을 유지하며 한국어 문장을 다듬기 | 간결한 수정본, 형식 검증 완료; 실제 에이전트 실행 미검증 |
 
 ## 설치: Codex
 
@@ -16,9 +17,10 @@ X에서 발견한 AI 에이전트 스킬을 검토하고, 출처와 라이선스
 git clone https://github.com/Lucas02-lab/korean-agent-skills.git
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
 test ! -e "${CODEX_HOME:-$HOME/.codex}/skills/discernment-nudge-ko" && cp -R korean-agent-skills/skills/discernment-nudge-ko "${CODEX_HOME:-$HOME/.codex}/skills/"
+test ! -e "${CODEX_HOME:-$HOME/.codex}/skills/humanize-korean-lite" && cp -R korean-agent-skills/skills/humanize-korean-lite "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
-비공개 저장소이므로 GitHub 접근 권한이 필요합니다. 새 Codex 세션을 시작해 `discernment-nudge-ko 스킬을 사용해줘`라고 요청합니다. 설치 명령은 이 프로젝트에서 실행하지 않았습니다. 다른 에이전트는 해당 제품의 스킬 경로와 지원 형식을 확인하세요.
+비공개 저장소이므로 GitHub 접근 권한이 필요합니다. 새 Codex 세션을 시작해 `discernment-nudge-ko 스킬을 사용해줘` 또는 `humanize-korean-lite 스킬을 사용해줘`라고 요청합니다. 설치 명령은 이 프로젝트에서 실행하지 않았습니다. 다른 에이전트는 해당 제품의 스킬 경로와 지원 형식을 확인하세요.
 
 ## 새 후보를 가져오는 순서
 
@@ -28,4 +30,4 @@ test ! -e "${CODEX_HOME:-$HOME/.codex}/skills/discernment-nudge-ko" && cp -R kor
 4. 한국어 사용 예와 사용 범위를 다듬고, 원본 표시·라이선스·변경 내용을 남깁니다.
 5. 설치 형식과 적용 사례를 검증하고, 실제 실행 여부와 한계를 기록합니다.
 
-[검토 후보](candidates/humanize-korean.md) | [출처와 변경 기록](skills/discernment-nudge-ko/ORIGIN.md)
+[원본 검토 기록](candidates/humanize-korean.md) | [첫 번째 스킬의 출처와 변경 기록](skills/discernment-nudge-ko/ORIGIN.md)
